@@ -76,7 +76,7 @@ const books = ref([])
 const keyword = ref('')
 
 const getBooks = async () => {
-  const { data, error } = await supabase.from('buku').select(`*, kategori(*)`)
+  const { data, error } = await supabase.from('Buku').select(`*, kategori(*)`)
     .ilike('judul', `%${keyword.value}%`)
   if (data) books.value = data
 }
@@ -96,7 +96,7 @@ onMounted(() => {
 }
 
 .navbar {
-  background-color: #DED2D2;
+  background-color: #00bfff;
 }
 
 .cover {
@@ -119,10 +119,10 @@ onMounted(() => {
 }
 
 .form {
-  background-color: #0d6efd;
+  background-color: #ffffff86;
 }
 
 ::placeholder {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 </style>

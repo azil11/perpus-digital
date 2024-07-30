@@ -3,9 +3,9 @@
 
     <div class="row d-flex justify-center">
       <div class="col-lg-5 text-center p-3">
-        <h2>Perpus Digital</h2>
-        SMKN 4 Tasikmalaya
-        Jl.Depok,Sukamenak, Purbaratu
+        <h2>PERPUS DIGITAL</h2>
+        SMKN 4 Kota Tasikmalaya
+        Jl.Depok,Sukamenak,Purbaratu
         <address>
         </address>
       </div>
@@ -19,12 +19,12 @@
 
     <div class="row my-3 d-flex justify-content-center">
       <nuxt-link to="/buku" class="row justify-content-center mt-18 ">
-        <button type="button" class=" btn btn-primary rounded-4 form-control-lg rounded-5 border-dark col-3">🔍 PENCARIN
+        <button type="button" class=" btn btn-primary rounded-4 form-control-lg rounded-5 border-dark col-3">🔍PENCARIAN
           BUKU</button>
       </nuxt-link>
       <input v-model="keyword" class="fani col-6 form-control form-control-lg rounded-5 border-dark  mt-2 "
         placeholder="🔍 Search Riwayat Kunjungan..." style="width: 30rem;" @input="getPengunjung" />
-        <h4>Jumlah Pengunjung {{visitors.length }}</h4>
+      <h4>Jumlah Pengunjung {{ visitors.length }}</h4>
 
     </div>
     <div class="table-responsive">
@@ -52,7 +52,7 @@
       </table>
     </div>
     <nuxt-link to="/pengunjung/tambah">
-      <button type="button" class="btn btn-primary btn-lg mt-4">KEMBALI</button>
+      <button type="button" class="btn btn-primary btn-lg mt-4">BACK</button>
     </nuxt-link>
   </div>
 </template>
@@ -65,7 +65,7 @@ const keyword = ref('')
 const visitors = ref([])
 
 const getPengunjung = async () => {
-  const { data, error } = await supabase.from('pengunjung').select('*, keanggotaan(*), keperluan(*)')
+  const { data, error } = await supabase.from('Pengunjung').select(`*, Keanggotaan(*), Keperluan(*)`)
     .ilike('nama', `%${keyword.value}%`)
     .order('id', { ascending: false })
   if (data) visitors.value = data
@@ -75,15 +75,17 @@ onMounted(() => {
   getPengunjung()
 })
 </script>
+
+
 <style scoped>
 address {
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 
 
 .container-fluid {
-  background-color: aqua;
+  background-color: rgb(255, 0, 0);
 
 
 }

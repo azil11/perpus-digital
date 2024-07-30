@@ -9,7 +9,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Penulis: {{ buku.penulis }}</li>
         <li class="list-group-item">Penerbit: {{ buku.penerbit }}</li>
-        <li class="list-group-item">{{ buku.deskripsi }}</li>
+        <li class="list-group-item">Deskripsi: {{ buku.deskripsi }}</li>
       </ul>
       <NuxtLink to="/buku/" class="btn btn-lg rounded-5 bg-primary" style="width: 9rem;">Kembali</NuxtLink>
     </div>
@@ -25,7 +25,7 @@ const route = useRoute()
 const buku = ref([])
 
 const getBooById = async () => {
-  const { data, error } = await supabase.from('buku').select('*, kategori(*)')
+  const { data, error } = await supabase.from('Buku').select('*, kategori(*)')
     .eq('id', route.params.id)
   if (data) buku.value = data[0]
 }

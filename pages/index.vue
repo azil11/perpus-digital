@@ -5,10 +5,10 @@
         <img src="@/assets/img/LOGO-SMK4.png" style="width: 100px;" alt="logo SMKN 4">
       </div>
       <div class="col-lg-7 text-center">
-        <h1>Perpus Digital</h1>
+        <h1>Perpustakaan Digital</h1>
         <address>
-          SMKN 4 Tasikmalaya
-          Jl.Depok,Sukamenak, Purbaratu
+          SMK NEGERI 4 Tasikmalaya
+          Jl.Depok, Kel.Sukamenak, Kec.Purbaratu
         </address>
       </div>
       <div class="col-lg-2">
@@ -21,7 +21,7 @@
       <div class="card bg-pengunjung rounded-5">
         <div class="card-body text-center">
           <h2>Isi Kunjungan</h2>
-          <h3>Click disini</h3>
+          <h3>Klik</h3>
         </div>
       </div>
     </nuxt-link>
@@ -34,14 +34,14 @@
 
 <style scoped>
 .navbar{
-  background-color: #DED2D2;
+  background-color: #57aeff;
 }
 .card{
   width: 20rem;
   height: 8rem;
-  background-color: #d3b5b58f;
+  background-color: #00000079;
   padding: 8  px;
-  color: blue;
+  color: rgb(255, 255, 255)
 }
 
 /* .card.bg-penunjung{
